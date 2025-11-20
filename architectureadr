@@ -1,0 +1,187 @@
+architecture/adr
+
+Phase 2 - Architecture Decision Document 3 X O Tic Tac Toe GEN TECH 
+
+ 
+
+Puskal Raj Lamsal 
+
+ 
+
+ Gagandeep Singh 
+
+ 
+
+Joseph Kafeke 
+
+ 
+
+ Architecture Decision record 1 for development framework 
+
+Context 
+ We need a framework to build the 3 X O game app for Android Devices. We have very limited mobile development experience, so we decided to also choose a framework that is beginner friendly. 
+
+Options Considered 
+
+React Native 
+
+Ionic 
+
+Cordova 
+
+Native Script 
+
+Framework7 
+
+Decision 
+ We went with React Native. 
+
+Rationale 
+
+Easiest for beginners 
+
+Uses JavaScript (which we know) 
+
+Works great for small games 
+
+Runs natively on Android 
+
+Consequences 
+ Positive: 
+
+Fast development 
+
+big online support 
+
+good Android performance 
+
+Negative: 
+
+needs Node.js setup 
+
+Must learn component-based UI 
+
+Architecture Decision record 2 for navigation strategy 
+
+Context 
+ The app will only use one main gameplay screen, so complex navigation is not needed. 
+
+Options Considered 
+
+Stack navigation 
+
+Tab navigation 
+
+Single-screen navigation 
+
+Decision 
+ Went with single-screen navigation. 
+
+Rationale 
+
+The game only needs one view 
+
+Simple for beginners 
+
+Reduces complexity 
+
+Consequences 
+ Positive: 
+
+No unnecessary navigation code 
+
+Easier to maintain 
+
+Negative: 
+
+Harder to scale if we add more screens later 
+
+ 
+
+Architecture Decision record 3 for hardware                                                                           Context 
+ Our  3 X O Tic Tac Toe app does not need access to device hardware. The app only requires touch interaction from the user. 
+
+Options Considered 
+
+GPS 
+
+Speaker 
+
+Camera 
+
+Fingerprint scanner 
+
+None 
+
+Decision 
+ We choose none. 
+
+Rationale 
+
+Game does not require hardware features 
+
+Keeps the permissions minimal 
+
+Reduces  complexity 
+
+Consequences 
+ Positive: 
+
+No security permissions 
+
+Simpler code 
+
+Negative: 
+
+No negative, since hardware isn’t needed. 
+
+ 
+
+ Architecture Decision record 4 For Data storage 
+
+Context 
+ 3 X O only displays a 3×3 board. It does not need to store long-term data. 
+
+Options Considered 
+
+Local unencrypted database 
+
+Local encrypted database 
+
+Remote cloud database 
+
+No database 
+
+Decision 
+ We went with No database. 
+
+Rationale 
+
+Nothing needs to be saved permanently 
+
+No accounts, scores, or user history 
+
+Simplifies development 
+
+Consequences 
+ Positive: 
+
+Very simple architecture 
+
+No database setup 
+
+No security issues 
+
+Negative: 
+
+Cannot save long-term statistics unless we add it later 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
