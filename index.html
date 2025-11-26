@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <div class="container">
+    <div class="card app-header">
+      <div>
+        <div class="app-title">Tic Tac Toe</div>
+        <div class="small">Mock-up — mobile-first</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="field">
+        <label for="player1">Player 1 name</label>
+        <input id="player1" type="text" placeholder="e.g. Alex">
+      </div>
+
+      <div class="field">
+        <label for="player2">Player 2 name</label>
+        <input id="player2" type="text" placeholder="e.g. Sam">
+      </div>
+
+      <div class="field">
+        <label>Choose first mark</label>
+        <div class="select-row">
+          <div class="choice active" data-choice="X">X</div>
+          <div class="choice" data-choice="O">O</div>
+        </div>
+      </div>
+
+      <button id="startBtn" class="btn">Start Game</button>
+      <button class="btn secondary" onclick="location.href='scoreboard.html'">Scoreboard</button>
+    </div>
+
+    <div class="card small">
+      <strong>Notes:</strong>
+      <p class="small">This mock-up takes player input and navigate to a lightweight board. Full game logic and saving scores will be done at the next phase which is phase 4.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

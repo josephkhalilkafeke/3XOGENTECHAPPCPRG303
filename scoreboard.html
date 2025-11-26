@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Scoreboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="scoreboard">
+  <div class="container">
+    <div class="card app-header">
+      <div>
+        <div class="app-title">Scoreboard</div>
+        <div class="small">Recent matches</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="score-list">
+        <div class="pill">Alex 1 — Sam 0</div>
+        <div class="pill">Sam 1 — Jordan 0</div>
+        <div class="pill">Alex 2 — Sam 2</div>
+      </div>
+
+      <div class="field">
+        <label>Quick action</label>
+        <div class="select-row">
+          <button onclick="location.href='index.html'" id="backHome" class="btn secondary">New Game</button>
+          <button class="btn" onclick="alert('Export to PDF (mock)')">Export</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card small">
+      <p class="small">This page shows where match results will appear in the next phase.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

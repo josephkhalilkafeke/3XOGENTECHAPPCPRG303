@@ -1,0 +1,174 @@
+/* phase 3 mobile app tic tac toe -khalil joseph kafeke */
+
+/* Reset-ish */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+:root{
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --accent: #2b6ef6;
+  --muted: #6b7280;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --radius: 14px;
+}
+
+/* Page layout */
+body {
+  background: linear-gradient(180deg, var(--bg), #eef2ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px; /* phone width */
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.app-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Form  */
+.field {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+label { font-size: 13px; color: #111827; }
+input[type="text"] {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e6ef;
+  font-size: 16px;
+}
+.select-row {
+  display:flex;
+  gap:8px;
+}
+.choice {
+  flex:1;
+  padding: 10px;
+  background:#f3f4f6;
+  border-radius:10px;
+  text-align:center;
+  cursor:pointer;
+  user-select:none;
+  border: 2px solid transparent;
+}
+.choice.active {
+  background: linear-gradient(90deg,var(--accent), #535bf2);
+  color: white;
+  border-color: rgba(0,0,0,0.06);
+}
+
+/* Buttons */
+.btn {
+  display:block;
+  width:100%;
+  padding: 14px;
+  margin-top:14px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  text-align:center;
+  text-decoration:none;
+  border: none;
+  cursor: pointer;
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid rgba(43,110,246,0.14);
+}
+
+/* Boardscreen */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+.cell {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-radius: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 42px;
+  font-weight:700;
+  cursor:pointer;
+  user-select:none;
+  border: 2px solid #eef2ff;
+  transition: transform .08s ease;
+}
+.cell:active { transform: scale(.98); }
+
+.info-row {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-top: 10px;
+  gap: 10px;
+}
+.pill {
+  background:#f3f4f6;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+/* Scoreboard */
+.score-list { margin-top: 8px; display:flex; flex-direction:column; gap:8px; }
+
+/*small nav */
+.footer-nav {
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:12px;
+}
+.nav-btn {
+  flex:1;
+  padding:10px;
+  border-radius: 10px;
+  text-align:center;
+  font-size:14px;
+  background:transparent;
+  border: 1px solid #e6e6ef;
+}
+
+/* larger screens */
+@media (min-width: 700px) {
+  body { padding: 40px; }
+  .container { max-width: 540px; }
+  .app-title { font-size: 22px; }
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic Tac Toe — Game</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="game">
+  <div class="container">
+    <div class="card app-header">
+      <div>
+        <div class="app-title">Game</div>
+        <div id="playersLabel" class="small">Player 1 vs Player 2</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="info-row">
+        <div class="pill" id="turnPill">Turn</div>
+        <div class="pill">Round 1</div>
+      </div>
+
+      <div class="board" aria-label="Tic Tac Toe board">
+        <div class="cell" role="button" tabindex="0" aria-label="cell 1"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 2"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 3"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 4"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 5"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 6"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 7"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 8"></div>
+        <div class="cell" role="button" tabindex="0" aria-label="cell 9"></div>
+      </div>
+
+      <div class="footer-nav">
+        <button id="toScore" class="nav-btn">Results</button>
+        <button class="nav-btn" onclick="location.href='index.html'">Home</button>
+      </div>
+    </div>
+
+    <div class="card small">
+      <p class="small">Tap a square to place a mark. This mock-up only shows input handling  no win checking yet.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
